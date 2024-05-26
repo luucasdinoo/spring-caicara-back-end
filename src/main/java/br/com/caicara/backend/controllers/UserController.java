@@ -2,6 +2,7 @@ package br.com.caicara.backend.controllers;
 
 import br.com.caicara.backend.model.dto.user.UserCreateDto;
 import br.com.caicara.backend.model.dto.user.UserResponseDto;
+import br.com.caicara.backend.model.dto.user.UserUpdatePasswordDto;
 import br.com.caicara.backend.model.entities.mapper.UserMapper;
 import br.com.caicara.backend.model.entities.user.User;
 import br.com.caicara.backend.model.services.UserService;
@@ -37,6 +38,18 @@ public class UserController {
     public ResponseEntity<UserResponseDto> getUserById(@PathVariable UUID id){
         User user = userService.findUserById(id);
         return ResponseEntity.ok(UserMapper.toDto(user));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> deleteUserByid(@PathVariable UUID id){
+        userService.deleteUserById(id);
+        return  ResponseEntity.noContent().build();
+    }
+
+    @PatchMapping("/{id}")
+    public ResponseEntity<Void> updatePassword(@PathVariable UUID id, @Valid @RequestBody UserUpdatePasswordDto dto){
+        userService.updatePassword(id, dto.getCurrentPassword(), dto.getNewPassword(), dto.getConfirmPassword());
+        return ResponseEntity.noContent().build();
     }
 
 }
