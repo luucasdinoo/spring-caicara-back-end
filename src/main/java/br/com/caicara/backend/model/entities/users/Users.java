@@ -1,4 +1,4 @@
-package br.com.caicara.backend.model.entities.user;
+package br.com.caicara.backend.model.entities.users;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -9,7 +9,7 @@ import java.util.UUID;
 @Entity(name = "users")
 @Table(name = "users")
 @NoArgsConstructor @AllArgsConstructor @Getter @Setter
-public class User implements Serializable {
+public class Users implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -21,10 +21,11 @@ public class User implements Serializable {
     private String password;
     @Column(name = "role", nullable = false, length = 15)
     @Enumerated(EnumType.STRING)
-    private Role role = Role.CLIENT;
+    private Role role = Role.ROLE_CLIENT;
 
     public enum Role {
-            CLIENT,
-            ADM,
+        ROLE_CLIENT,
+        ROLE_ADM,
     }
+
 }

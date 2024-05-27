@@ -1,4 +1,4 @@
-package br.com.caicara.backend.model.dto.user;
+package br.com.caicara.backend.model.dto.users;
 
 import lombok.*;
 
