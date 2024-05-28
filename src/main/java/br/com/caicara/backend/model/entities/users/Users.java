@@ -21,11 +21,11 @@ public class Users implements Serializable {
     private String password;
     @Column(name = "role", nullable = false, length = 15)
     @Enumerated(EnumType.STRING)
-    private Role role = Role.ROLE_CLIENT;
+    private Role role ;
 
     public enum Role {
-        ROLE_CLIENT,
-        ROLE_ADM,
+        ROLE_RIBEIRINHO,
+        ROLE_EMPRESA,
+        ROLE_ADM;
     }
-
 }

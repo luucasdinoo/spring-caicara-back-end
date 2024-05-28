@@ -37,21 +37,21 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    @PreAuthorize("hasAnyRole('ADM', 'CLIENT') AND #id ==authentication.principal.id")
+    @PreAuthorize("hasAnyRole('ADM', 'RIBEIRINHO','EMPRESA') AND #id ==authentication.principal.id")
     public ResponseEntity<UserResponseDto> getUserById(@PathVariable UUID id){
         Users users = userService.findUserById(id);
         return ResponseEntity.ok(UserMapper.toDto(users));
     }
 
     @DeleteMapping("/{id}")
-    @PreAuthorize("hasAnyRole('ADM', 'CLIENT') AND #id ==authentication.principal.id")
+    @PreAuthorize("hasAnyRole('ADM', 'RIBEIRINHO','EMPRESA') AND #id ==authentication.principal.id")
     public ResponseEntity<Void> deleteUserByid(@PathVariable UUID id){
         userService.deleteUserById(id);
         return  ResponseEntity.noContent().build();
     }
 
     @PatchMapping("/{id}")
-    @PreAuthorize("hasAnyRole('ADM', 'CLIENT') AND #id ==authentication.principal.id")
+    @PreAuthorize("hasAnyRole('ADM', 'RIBEIRINHO','EMPRESA') AND #id ==authentication.principal.id")
     public ResponseEntity<Void> updatePassword(@PathVariable UUID id, @Valid @RequestBody UserUpdatePasswordDto dto){
         userService.updatePassword(id, dto.getCurrentPassword(), dto.getNewPassword(), dto.getConfirmPassword());
         return ResponseEntity.noContent().build();

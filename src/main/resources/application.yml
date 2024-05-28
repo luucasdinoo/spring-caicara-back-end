@@ -1,6 +1,6 @@
 spring:
   application:
-    name: demo_park
+    name: caicara-back-end
   web:
     locale: pt_BR
   datasource:
