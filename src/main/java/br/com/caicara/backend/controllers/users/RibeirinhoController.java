@@ -1,8 +1,8 @@
 package br.com.caicara.backend.controllers.users;
 
-import br.com.caicara.backend.model.entities.dto.users.RibeirinhoCreateDto;
-import br.com.caicara.backend.model.entities.dto.users.RibeirinhoResponseDto;
-import br.com.caicara.backend.model.entities.dto.users.RibeirinhoUpdateDto;
+import br.com.caicara.backend.model.dto.users.RibeirinhoCreateDto;
+import br.com.caicara.backend.model.dto.users.RibeirinhoResponseDto;
+import br.com.caicara.backend.model.dto.users.RibeirinhoUpdateDto;
 import br.com.caicara.backend.model.entities.mapper.RibeirinhoMapper;
 import br.com.caicara.backend.model.entities.users.Ribeirinho;
 import br.com.caicara.backend.model.jwt.JwtUserDetails;

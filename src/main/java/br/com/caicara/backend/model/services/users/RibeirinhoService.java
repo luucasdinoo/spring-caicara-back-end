@@ -1,6 +1,6 @@
 package br.com.caicara.backend.model.services.users;
 
-import br.com.caicara.backend.model.entities.dto.users.RibeirinhoUpdateDto;
+import br.com.caicara.backend.model.dto.users.RibeirinhoUpdateDto;
 import br.com.caicara.backend.model.entities.users.Ribeirinho;
 import br.com.caicara.backend.model.repositories.users.RibeirinhoRepository;
 import lombok.RequiredArgsConstructor;

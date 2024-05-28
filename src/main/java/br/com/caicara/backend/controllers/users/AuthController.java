@@ -1,7 +1,7 @@
 package br.com.caicara.backend.controllers.users;
 
 import br.com.caicara.backend.exception.ErrorMessage;
-import br.com.caicara.backend.model.entities.dto.users.UserLoginDto;
+import br.com.caicara.backend.model.dto.users.UserLoginDto;
 import br.com.caicara.backend.model.jwt.JwtToken;
 import br.com.caicara.backend.model.jwt.JwtUserDetailsService;
 import jakarta.servlet.http.HttpServletRequest;

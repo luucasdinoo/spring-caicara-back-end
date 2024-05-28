@@ -1,4 +1,4 @@
-package br.com.caicara.backend.model.entities.dto.users;
+package br.com.caicara.backend.model.dto.users;
 
 import jakarta.validation.constraints.*;
 import lombok.*;

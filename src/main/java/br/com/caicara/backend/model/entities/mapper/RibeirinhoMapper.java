@@ -1,9 +1,8 @@
 package br.com.caicara.backend.model.entities.mapper;
 
-import br.com.caicara.backend.model.entities.dto.users.RibeirinhoCreateDto;
-import br.com.caicara.backend.model.entities.dto.users.RibeirinhoResponseDto;
+import br.com.caicara.backend.model.dto.users.RibeirinhoCreateDto;
+import br.com.caicara.backend.model.dto.users.RibeirinhoResponseDto;
 import br.com.caicara.backend.model.entities.users.Ribeirinho;
-import br.com.caicara.backend.model.entities.users.Users;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 import org.modelmapper.ModelMapper;
