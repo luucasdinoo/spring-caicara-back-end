@@ -25,7 +25,7 @@ public class RibeirinhoService {
 
     @Transactional(readOnly = true)
     public Ribeirinho getRibeirinhoById(UUID id){
-        return ribeirinhoRepository.findById(id).orElseThrow(()-> new RuntimeException(String.format("Id= '%s' não encontrado", id)));
+        return ribeirinhoRepository.findById(id).orElseThrow(()-> new RuntimeException(("Id not found")));
     }
 
     @Transactional(readOnly = true)
@@ -35,7 +35,7 @@ public class RibeirinhoService {
 
     @Transactional
     public void updateRibeirinho(UUID id, RibeirinhoUpdateDto dto) {
-        Ribeirinho rib = ribeirinhoRepository.findById(id).orElseThrow(()-> new RuntimeException("Id não encontrado"));
+        Ribeirinho rib = ribeirinhoRepository.findById(id).orElseThrow(()-> new RuntimeException("Id not found"));
         modelMapper.map(dto, rib);
         ribeirinhoRepository.save(rib);
     }
@@ -46,7 +46,8 @@ public class RibeirinhoService {
     }
 
     @Transactional(readOnly = true)
-    public Ribeirinho getUserByCpf(String cpf) {
-        return ribeirinhoRepository.findByCpf(cpf).orElseThrow(() -> new RuntimeException(String.format("Cliente com cpf '%s' não encontrado", cpf)));
+    public Ribeirinho getRibByCpf(String cpf) {
+        return ribeirinhoRepository.findByCpf(cpf).orElseThrow(() -> new RuntimeException("Cpf not found"));
     }
+
 }

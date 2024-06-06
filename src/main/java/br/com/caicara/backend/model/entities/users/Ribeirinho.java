@@ -1,5 +1,6 @@
 package br.com.caicara.backend.model.entities.users;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.*;
 

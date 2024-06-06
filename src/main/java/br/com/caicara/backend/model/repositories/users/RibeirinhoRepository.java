@@ -13,4 +13,6 @@ public interface RibeirinhoRepository extends JpaRepository<Ribeirinho, UUID>{
     Ribeirinho findByUsersId(UUID id);
 
     Optional<Ribeirinho> findByCpf(String cpf);
+
+    //Ribeirinho findByUsername(String username);
 }

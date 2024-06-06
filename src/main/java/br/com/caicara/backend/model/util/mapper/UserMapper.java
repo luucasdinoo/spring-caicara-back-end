@@ -1,4 +1,4 @@
-package br.com.caicara.backend.model.entities.mapper;
+package br.com.caicara.backend.model.util.mapper;
 
 import br.com.caicara.backend.model.dto.users.UserCreateDto;
 import br.com.caicara.backend.model.dto.users.UserResponseDto;
