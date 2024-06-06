@@ -3,7 +3,7 @@ package br.com.caicara.backend.controllers.users;
 import br.com.caicara.backend.model.dto.users.UserCreateDto;
 import br.com.caicara.backend.model.dto.users.UserResponseDto;
 import br.com.caicara.backend.model.dto.users.UserUpdatePasswordDto;
-import br.com.caicara.backend.model.entities.mapper.UserMapper;
+import br.com.caicara.backend.model.util.mapper.UserMapper;
 import br.com.caicara.backend.model.entities.users.Users;
 import br.com.caicara.backend.model.services.users.UserService;
 import jakarta.validation.Valid;
