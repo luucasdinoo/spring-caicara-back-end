@@ -1,10 +1,12 @@
 package br.com.caicara.backend.model.entities.users;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+import br.com.caicara.backend.model.entities.products.Product;
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.io.Serializable;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 @Entity
@@ -27,4 +29,7 @@ public class Ribeirinho implements Serializable {
     @OneToOne
     @JoinColumn(name = "id_users", nullable = false)
     private Users users;
+    @OneToMany
+    @JoinColumn(name = "product_id")
+    private List<Product> products = new ArrayList<>();
 }

@@ -1,7 +1,7 @@
 package br.com.caicara.backend.model.entities.products;
 
 import br.com.caicara.backend.model.entities.users.Ribeirinho;
-import br.com.caicara.backend.model.entities.users.Users;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -37,6 +37,7 @@ public class Product implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "id_ribeirinho")
+    @JsonIgnore
     private Ribeirinho ribeirinho;
 
 

@@ -25,6 +25,7 @@ public class ProductService {
     public Product createProduct(Product product, JwtUserDetails userDetails) {
         Ribeirinho rib = ribeirinhoService.getUserById(userDetails.getId());
         product.setRibeirinho(rib);
+        rib.getProducts().add(product);
         return productRepository.save(product);
     }
 
